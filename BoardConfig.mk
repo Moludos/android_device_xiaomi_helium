@@ -21,5 +21,11 @@ DEVICE_PATH := device/xiaomi/helium
 # Assert
 TARGET_OTA_ASSERT_DEVICE := helium
 
+# Set buildtype official  
+NUCLEAR_BUILDTYPE := OFFICIAL
+
+# Add fix for common JACK issues
+ANDROID_JACK_VM_ARGS := -Dfile.encoding=UTF-8 -XX:+TieredCompilation -Xmx4096m
+
 # inherit from the proprietary version
 -include vendor/xiaomi/helium/BoardConfigVendor.mk
